@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			let aantal = prompt("Hoeveel getallen?", "10");
+			let getallen = [];
+			for (i = 0; i < aantal; i++) {
+				getallen.push((Math.random() * 1000).toFixed(0));
+			}
+
+			let grootsteGetal = getallen[0];
+			let positie;
+
+			for (i = 0; i < getallen.length; i++) {
+				if (grootsteGetal < getallen[i]) {
+					grootsteGetal = getallen[i];
+					positie = i;
+				}
+			}
+
+			document.write(
+				`<p>Het grootste getal uit ${getallen} is ${grootsteGetal} en staat op de plaats ${positie}</p>`
+			);
+		</script>
+	</body>
+</html>
